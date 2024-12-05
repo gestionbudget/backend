@@ -1,0 +1,31 @@
+spring:
+  main:
+    web-application-type: servlet
+  application:
+    name: SpringProject
+  datasource:
+    url: jdbc:postgresql://ep-odd-thunder-a5a9g673.us-east-2.aws.neon.tech/neondb?user=neondb_owner&password=qOF9bH8QMfSh&sslmode=require
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    tryItOutEnabled: true
+    operationsSorter: method
+  packages-to-scan: data.TransactionController
+  pathsToMatch: /transactions/**
+
+server:
+  port: 3000
