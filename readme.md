@@ -11,20 +11,18 @@ GestionBudget est une application web basée sur Spring Boot qui permet de gére
 - [Lancement de l'Application](#lancement-de-lapplication)
 - [Test de l'Application](#test-de-lapplication)
 - [Contribution](#contribution)
-- [Licence](#licence)
 
 ## Prérequis
 
 - Java 21 ou supérieur
 - Maven 3.6+ ou Gradle 6+
-- PostgreSQL (ou toute autre base de données compatible JDBC)
+- NeonPostgreSQL 
 
 ## Installation
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/gestionbudget.git
-   ```
+   git clone https://github.com/gestionbudget/backend.git
 
 2. Accédez au répertoire du projet :
    ```bash
@@ -54,18 +52,12 @@ Le projet expose des endpoints RESTful pour gérer les transactions.
 
 ## Lancement de l'Application
 
-Assurez-vous que votre base de données est démarrée.
+Assurez-vous que votre base de données est crée.
 
 Pour démarrer l'application :
 
 ```bash
 mvn spring-boot:run
-```
-
-Ou avec Gradle :
-
-```bash
-./gradlew bootRun
 ```
 
 ## Test de l'Application
@@ -74,15 +66,9 @@ Pour exécuter les tests, utilisez :
 
 ```bash
 mvn test
-```
 
-Ou avec Gradle :
 
-```bash
-./gradlew test
-```
-
-## Contribution
+## En cas deContribution
 
 1. Fork du projet
 2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
@@ -90,6 +76,3 @@ Ou avec Gradle :
 4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrez une demande de tirage (pull request)
 
-## Licence
-
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.

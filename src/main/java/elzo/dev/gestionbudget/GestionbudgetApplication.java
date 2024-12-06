@@ -1,3 +1,4 @@
+
 package elzo.dev.gestionbudget;
 
 import org.springframework.boot.SpringApplication;
@@ -7,14 +8,15 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan("data.entities")
 @EnableJpaRepositories("data.repositories")
+@EntityScan("data.entities")
 @ComponentScan(basePackages = {
-		"elzo.dev.gestionbudget",
 		"data.TransactionController",
-		"data.services",
-		"data.entities",
+		"services",
 		"data.repositories",
+		"data.Interface",
+		"data.entities",
+		"data.exceptions",
 		"config"
 })
 public class GestionbudgetApplication {
